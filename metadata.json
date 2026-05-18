@@ -1,0 +1,6 @@
+{
+  "name": "Velocità Lux - Luxury Car Showroom",
+  "description": "A premium, high-performance automotive showroom featuring 3D hover effects, GSAP animations, and immersive dark UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

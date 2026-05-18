@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-neon-blue: #00f2ff;
+  --color-neon-purple: #bc13fe;
+  --color-neon-red: #ff003c;
+  
+  --shadow-neon-blue: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+  --shadow-neon-purple: 0 0 10px #bc13fe, 0 0 20px #bc13fe;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white antialiased selection:bg-neon-blue selection:text-black;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+  .text-glow-blue {
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+  }
+  .glow-border-blue {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+  }
+  .bg-glass {
+    @apply bg-black/40 backdrop-blur-md border border-white/10;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #111;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f2ff;
+}
